@@ -75,11 +75,16 @@ namespace IT2166_Assignment.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, user.RememberMe, false);
+                var result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, user.RememberMe, true);
 
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Home");
+                }
+
+                if (result.IsLockedOut)
+                {
+                    return View("Locked");
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
