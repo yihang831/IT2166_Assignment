@@ -32,6 +32,7 @@ namespace IT2166_Assignment
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 12;
+                options.Password.RequiredUniqueChars = 3;
 
                 //Account lockout
                 options.Lockout.MaxFailedAccessAttempts = 3;
@@ -59,6 +60,7 @@ namespace IT2166_Assignment
             }
             else
             {
+                app.UseStatusCodePagesWithRedirects("/Error/{0}");
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
