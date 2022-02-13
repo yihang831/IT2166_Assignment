@@ -33,6 +33,7 @@ namespace IT2166_Assignment
             {
                 options.Password.RequiredLength = 12;
 
+                //Account lockout
                 options.Lockout.MaxFailedAccessAttempts = 3;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
             }).AddEntityFrameworkStores<AppDBContext>();
