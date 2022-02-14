@@ -37,7 +37,7 @@ namespace IT2166_Assignment
                 //Account lockout
                 options.Lockout.MaxFailedAccessAttempts = 3;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
-            }).AddEntityFrameworkStores<AppDBContext>();
+            }).AddRoles<IdentityRole>().AddEntityFrameworkStores<AppDBContext>();
 
             //session timeout
             services.ConfigureApplicationCookie(options =>

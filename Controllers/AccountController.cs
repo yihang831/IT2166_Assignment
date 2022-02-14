@@ -46,6 +46,7 @@ namespace IT2166_Assignment.Controllers
 
                 if (result.Succeeded)
                 {
+                    //_userManager.AddToRoleAsync(user, "Administrator").Wait();
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
                     return RedirectToAction("index", "Home");

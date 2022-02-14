@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IT2166_Assignment.Models;
 
 namespace IT2166_Assignment.Models
 {
@@ -21,5 +22,7 @@ namespace IT2166_Assignment.Models
             base.OnModelCreating(modelBuilder);
 
         }
+
+        public DbSet<IT2166_Assignment.Models.ProjectRole> ProjectRole { get; set; }
     }
 }
