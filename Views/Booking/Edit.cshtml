@@ -1,7 +1,7 @@
 ﻿@model IT2166_Assignment.Models.Booking
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
 <div class="col-11 mx-auto pt-0 p-0">
@@ -9,7 +9,7 @@
         <div class="card-header bg-success text-uppercase text-white" style="height:45px">
             <h4>Booking</h4>
         </div>
-        <form enctype="multipart/form-data" asp-action="Create">
+        <form enctype="multipart/form-data" asp-action="Edit">
             <div class="row">
                 <div class="col-md-6">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -29,7 +29,7 @@
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <br />
@@ -38,7 +38,7 @@
                         <span asp-validation-for="NRIC" class="text-danger"></span>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <br />
@@ -51,7 +51,7 @@
                         <span asp-validation-for="Gender" class="text-danger"></span>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <br />
@@ -67,7 +67,7 @@
                         <span asp-validation-for="MaritalStatus" class="text-danger"></span>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <br />
@@ -76,7 +76,7 @@
                         <span asp-validation-for="Address" class="text-danger"></span>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <br />
@@ -85,7 +85,7 @@
                         <span asp-validation-for="DOB" class="text-danger"></span>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <br />
@@ -94,13 +94,13 @@
                         <span asp-validation-for="ContactNo" class="text-danger"></span>
                     </div>
                 </div>
-                
+
                 <div class="col-12 btn-group">
                     <div class="col-6 form-group text-right p-2">
                         <a asp-action="Index" class="btn btn-secondary">&nbsp;Back&nbsp;</a>
                     </div>
                     <div class="col-6 form-group text-left p-2">
-                        <input type="submit" value="Create" class="btn btn-primary"/>
+                        <input type="submit" value="Save" class="btn btn-primary" />
                     </div>
                 </div>
             </div>

@@ -1,0 +1,27 @@
+﻿@model IT2166_Assignment.ViewModels.EditAccountViewModel
+@{
+    ViewData["Title"] = "Edit Account";
+}
+
+<h1>Profile</h1>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            @*<input class="form-control" asp-for="Id" hidden/>*@
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <br />
+            <button type="submit" class="btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
+}

@@ -20,6 +20,7 @@ namespace IT2166_Assignment.Models
         public string Email { get; set; }
 
         [Required]
+        [StringLength(9, MinimumLength = 9)]
         public string NRIC { get; set; }
 
         [Required]
@@ -36,6 +37,7 @@ namespace IT2166_Assignment.Models
         public DateTime DOB { get; set; }
 
         [Required]
+        [StringLength(8, MinimumLength = 8)]
         [DataType(DataType.PhoneNumber)]
         public string ContactNo { get; set; }
     }
